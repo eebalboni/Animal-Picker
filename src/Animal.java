@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Animal {
@@ -9,10 +10,12 @@ public class Animal {
         System.out.println("Would you like to see a cat or dog?");
         userInput = scan.next();
 
-        if (userInput.equals("cat")) {
+        if (userInput.toLowerCase().equals("cat")) {
             System.out.println("Print ASCII cat here.");
-        } else if (userInput.equals("dog")) {
+        } else if (userInput.toLowerCase().equals("dog")) {
             System.out.println("Print ASCII dog here");
+        }else{
+            System.out.println("Error: Incorrect user input.");
         }
     }
 }
